@@ -1,4 +1,4 @@
-package com.licoded.main;
+package com.licoded.daos;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
@@ -7,7 +7,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @SpringBootApplication
 @EnableSwagger2
-@MapperScan(basePackages = {"com.licoded.main.mapper"})
+@MapperScan(basePackages = {"com.licoded.daos.mapper"})
 public class MainApplication {
 
     public static void main(String[] args) {

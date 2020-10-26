@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.licoded.main.mapper.UserMapper">
-  <resultMap id="BaseResultMap" type="com.licoded.main.domain.User">
-    <result column="test_username" jdbcType="VARCHAR" property="testUsername" />
-    <result column="test_password" jdbcType="VARCHAR" property="testPassword" />
+<mapper namespace="com.licoded.daos.mapper.UserMapper">
+  <resultMap id="BaseResultMap" type="com.licoded.daos.domain.User">
+    <result column="username" jdbcType="VARCHAR" property="username" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
   </resultMap>
   <sql id="Example_Where_Clause">
     <where>
@@ -64,15 +64,15 @@
     </where>
   </sql>
   <sql id="Base_Column_List">
-    test_username, test_password
+    username, `password`
   </sql>
-  <select id="selectByExample" parameterType="com.licoded.main.domain.UserExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="com.licoded.daos.domain.UserExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
     </if>
     <include refid="Base_Column_List" />
-    from test_user
+    from user
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
@@ -80,49 +80,49 @@
       order by ${orderByClause}
     </if>
   </select>
-  <delete id="deleteByExample" parameterType="com.licoded.main.domain.UserExample">
-    delete from test_user
+  <delete id="deleteByExample" parameterType="com.licoded.daos.domain.UserExample">
+    delete from user
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.licoded.main.domain.User">
-    insert into test_user (test_username, test_password)
-    values (#{testUsername,jdbcType=VARCHAR}, #{testPassword,jdbcType=VARCHAR})
+  <insert id="insert" parameterType="com.licoded.daos.domain.User">
+    insert into user (username, `password`)
+    values (#{username,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="com.licoded.main.domain.User">
-    insert into test_user
+  <insert id="insertSelective" parameterType="com.licoded.daos.domain.User">
+    insert into user
     <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="testUsername != null">
-        test_username,
+      <if test="username != null">
+        username,
       </if>
-      <if test="testPassword != null">
-        test_password,
+      <if test="password != null">
+        `password`,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="testUsername != null">
-        #{testUsername,jdbcType=VARCHAR},
+      <if test="username != null">
+        #{username,jdbcType=VARCHAR},
       </if>
-      <if test="testPassword != null">
-        #{testPassword,jdbcType=VARCHAR},
+      <if test="password != null">
+        #{password,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.licoded.main.domain.UserExample" resultType="java.lang.Long">
-    select count(*) from test_user
+  <select id="countByExample" parameterType="com.licoded.daos.domain.UserExample" resultType="java.lang.Long">
+    select count(*) from user
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </select>
   <update id="updateByExampleSelective" parameterType="map">
-    update test_user
+    update user
     <set>
-      <if test="record.testUsername != null">
-        test_username = #{record.testUsername,jdbcType=VARCHAR},
+      <if test="record.username != null">
+        username = #{record.username,jdbcType=VARCHAR},
       </if>
-      <if test="record.testPassword != null">
-        test_password = #{record.testPassword,jdbcType=VARCHAR},
+      <if test="record.password != null">
+        `password` = #{record.password,jdbcType=VARCHAR},
       </if>
     </set>
     <if test="_parameter != null">
@@ -130,9 +130,9 @@
     </if>
   </update>
   <update id="updateByExample" parameterType="map">
-    update test_user
-    set test_username = #{record.testUsername,jdbcType=VARCHAR},
-      test_password = #{record.testPassword,jdbcType=VARCHAR}
+    update user
+    set username = #{record.username,jdbcType=VARCHAR},
+      `password` = #{record.password,jdbcType=VARCHAR}
     <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>

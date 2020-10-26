@@ -1,7 +1,7 @@
-package com.licoded.main.service;
+package com.licoded.daos.service;
 
-import com.licoded.main.domain.User;
-import com.licoded.main.mapper.my.MyUserMapper;
+import com.licoded.daos.domain.User;
+import com.licoded.daos.mapper.my.MyUserMapper;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;

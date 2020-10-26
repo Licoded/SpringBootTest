@@ -1,4 +1,4 @@
-package com.licoded.main.config;
+package com.licoded.daos.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

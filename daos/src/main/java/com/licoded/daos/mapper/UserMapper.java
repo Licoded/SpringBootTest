@@ -1,9 +1,10 @@
-package com.licoded.main.mapper;
+package com.licoded.daos.mapper;
 
-import com.licoded.main.domain.User;
-import com.licoded.main.domain.UserExample;
-import java.util.List;
+import com.licoded.daos.domain.User;
+import com.licoded.daos.domain.UserExample;
 import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 public interface UserMapper {
     long countByExample(UserExample example);
