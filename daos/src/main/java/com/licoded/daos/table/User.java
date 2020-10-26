@@ -1,4 +1,4 @@
-package com.licoded.daos.domain;
+package com.licoded.daos.table;
 
 public class User {
     private String username;

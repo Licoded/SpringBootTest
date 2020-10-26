@@ -1,6 +1,6 @@
 package com.licoded.daos.mapper.my;
 
-import com.licoded.daos.domain.User;
+import com.licoded.daos.table.User;
 
 import java.util.List;
 

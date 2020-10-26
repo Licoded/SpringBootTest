@@ -1,7 +1,7 @@
 package com.licoded.daos.mapper;
 
-import com.licoded.daos.domain.User;
-import com.licoded.daos.domain.UserExample;
+import com.licoded.daos.table.User;
+import com.licoded.daos.table.UserExample;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

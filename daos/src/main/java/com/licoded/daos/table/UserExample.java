@@ -1,4 +1,4 @@
-package com.licoded.daos.domain;
+package com.licoded.daos.table;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,6 +1,6 @@
 package com.licoded.daos.controller;
 
-import com.licoded.daos.service.UserService;
+import com.licoded.daos.dao.UserService;
 import com.licoded.tools.resModel.SuccessModel;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
